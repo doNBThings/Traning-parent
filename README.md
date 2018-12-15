@@ -10,6 +10,7 @@
 - 通过git下载项目(平时开发模块时只需要training-parent(父项目),training-core（工具类项目）,training-register（注册中心项目）,training-对应模块（业务开发项目），traning-web（前端页面项目）)
 - 在elipse中打开各项目,配置为 maven项目,elipse会自动下载maven依赖。
 - 按顺序运行项目中的启动类，先运行training-register中的TrainingRegisterApplication.java，再执行training-模块 中的 模块Application.java(如training-test1中的Test1Application.java),启动前端项目(前端项目启动方法详见前端工程中的readme.md)。
+- 浏览器中访问http://127.0.0.1:模块端口/swagger-ui.html (这是在后端项目中开发的请求列表，用于调试)
 
 ## 主要业务逻辑
 1. 用户登录系统后，可提交需求申请。
