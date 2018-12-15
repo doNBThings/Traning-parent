@@ -2,8 +2,14 @@
 
 ## 系统概述
 培训系统，界面类似[慕课网](https://www.imooc.com/)，功能包含需求，课程，用户中心，社区等。
+
 ## 作者
 甘培康 费青松 季海峰 富裕华 夏久聪 唐靖 郭俊 戴豪 张敏
+
+## 项目配置
+- 通过git下载项目(平时开发模块时只需要training-parent(父项目),training-core（工具类项目）,training-register（注册中心项目）,training-对应模块（业务开发项目），traning-web（前端页面项目）)
+- 在elipse中打开各项目,配置为 maven项目,elipse会自动下载maven依赖。
+- 按顺序运行项目中的启动类，先运行training-register中的TrainingRegisterApplication.java，再执行training-模块 中的 模块Application.java(如training-test1中的Test1Application.java),启动前端项目(前端项目启动方法详见前端工程中的readme.md)。
 
 ## 主要业务逻辑
 1. 用户登录系统后，可提交需求申请。
@@ -15,22 +21,33 @@
 ## 功能点拆分（待补充）
 
 ### 用户
-- 个人设置
-- 经验
+- 注册
+- 登录
+- 账户绑定
+- 个人信息
+- 操作记录
+- 我的收藏
+- 我的需求
 - 我的课程
+- 私信 
+- 通知
 
-### 需求
+### 需求(待补充)
 - 我要提需求
 - 需求列表
+- 需求合并拆分
+- 从需求创建课程，指定讲师
 
 ### 课程
-- 课程列表
+- 课程列表（最热，最新）
+- 课程详情
+- 课程评分
+- 课程搜索
+- 新增课程
 
-### 共享中心
-
-### 通知
-
-### 私信
+### 社区(待补充)
+- 手记
+- 猿问
 
 ### 搜索
 
@@ -57,8 +74,8 @@ mysql
 | training-logger | 日志服务 | 8002 | 消费并存储日志 |  |
 | training-monitor | 监控中心 | 8003 | 监控服务运行状况 |  |
 | training-user | 用户服务 | 9001 | 提供用户，资源，权限等接口 | 唐靖 |
-| training-req | 需求服务 | 9002 | 需求服务 | 富钰华 |
-| training-course | 课程服务 | 9003 | 课程服务 | 夏久聪 |
+| training-req | 需求服务 | 9002 | 需求服务 | 富钰华，戴豪 |
+| training-course | 课程服务 | 9003 | 课程服务 | 夏久聪，张敏 |
 | training-community | 社区服务 | 9004 | 共享服务 | 郭俊 |
 | training-search | 搜索服务 | 9005 | 搜索服务 | 费青松 |
 | training-web | 前端 | 80 | 网页端 | 季海峰 |
